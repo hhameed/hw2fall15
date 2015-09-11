@@ -3,21 +3,42 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  if arr.length > 0
+    arr.inject{|total, x| total + x}
+  else
+    0
+  end
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  if arr.length == 0
+    0
+  elsif arr.length == 1
+    arr[0]
+  else
+    len = arr.length
+    arr.sort!
+    arr[len-2] + arr[len-1]
+  end
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if arr.length > 1
+    arr.each_with_index do |outter, i|
+      arr.each_with_index do |inner, j|
+        if i != j && outter + inner == n
+          return true
+        end
+      end
+    end
+  end
+  false
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, " + name
 end
 
 def starts_with_consonant? s
