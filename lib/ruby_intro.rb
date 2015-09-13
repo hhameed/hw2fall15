@@ -42,15 +42,35 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  s =~ /^[b-df-hj-np-tv-z].*$/i
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  s.gsub(/0/,'').gsub(/1/,'').length == 0 && s =~ /.*00$/ || s == "0"
 end
 
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  def initialize isbn, price
+    raise ArgumentError, "Invalid isbn" if isbn.length==0
+    raise ArgumentError, "Invalid price" if price<=0.0
+    @isbn = isbn
+    @price = price
+  end
+  def isbn
+    @isbn
+  end
+  def isbn= isbn
+    @isbn = isbn
+  end
+  def price
+    @price
+  end
+  def price= price
+    @price = price
+  end
+  def price_as_string
+    sprintf "$%.2f", price
+  end
 end
