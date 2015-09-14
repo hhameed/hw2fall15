@@ -63,7 +63,7 @@ else
 end
 
 
-test_str = "The rent is due on the first day of the month unless the first   day of the month falls on a Saturday or Sunday"
+test_str = "The rent is due on the first day of the month unless the first day of the month falls on a Saturday or Sunday"
 
 word_count = count_words test_str
 puts word_count
