@@ -25,11 +25,19 @@
 #instructions specified in the assignment description to hand-in your work.
 
 def palindrome?(str)
-  # YOUR CODE HERE
+  str1 = str.downcase.gsub(/\W/, '')
+  str2 = str1.reverse
+  puts sprintf "Str1: %s\n", str1
+  puts sprintf "Str2: %s\n", str2
+  str1 == str2
 end
 
 def count_words(str)
-  # YOUR CODE HERE
+  str = str.split(/\W/)
+  str = str.select{|v| v != ''}
+  str = str.group_by{|s| s}
+  str = str.map{|k,v| [k, v.length]}
+  str.to_h
 end
 
 
@@ -55,7 +63,7 @@ else
 end
 
 
-test_str = "The rent is due on the first day of the month unless the first day of the month falls on a Saturday or Sunday"
+test_str = "The rent is due on the first day of the month unless the first   day of the month falls on a Saturday or Sunday"
 
 word_count = count_words test_str
 puts word_count
