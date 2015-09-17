@@ -2,8 +2,15 @@ class WrongNumberOfPlayersError < StandardError ; end
 class NoSuchStrategyError < StandardError ; end
 
 def rps_game_winner(game)
-  raise WrongNumberOfPlayersError unless game.length == 2
-  # YOUR CODE HERE
+  raise WrongNumberOfPlayersError, 'Wrong number of players.' unless game.length == 2
+  raise NoSuchStrategyError, 'Strategy not found.' if game.any?{|arr| !(arr[1] =~ /^(s|p|r){1}$/i)}
+  if (game.map{|arr| arr[1]}.join("") =~ /^rs|sp|pr$/i)
+    arr[0]
+  elsif (game.map{|arr| arr[1]}.join("") =~ /^sr|ps|rp$/i)
+    arr[1]
+  else
+    arr[0]
+  end
 end
 
 def rps_tournament_winner(tournament)
