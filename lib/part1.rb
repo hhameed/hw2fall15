@@ -27,12 +27,11 @@
 def palindrome?(str)
   str1 = str.downcase.gsub(/\W/, '')
   str2 = str1.reverse
-  puts sprintf "Str1: %s\n", str1
-  puts sprintf "Str2: %s\n", str2
   str1 == str2
 end
 
 def count_words(str)
+  str = str.downcase
   str = str.split(/\W/)
   str = str.select{|v| v != ''}
   str = str.group_by{|s| s}
@@ -45,25 +44,22 @@ end
 #You should remove everything below this line prior to submitting your file
 
 
+=begin
 test_str = "there goes the neighborhood"
-
 if palindrome? test_str
   puts test_str + " is a palindrome!"
 else
   puts test_str + " is NOT a palindrome!"
 end
-
 
 test_str = "Madam, I'm Adam"
-
 if palindrome? test_str
   puts test_str + " is a palindrome!"
 else
   puts test_str + " is NOT a palindrome!"
 end
 
-
-test_str = "The rent is due on the first day of the month unless the first day of the month falls on a Saturday or Sunday"
-
-word_count = count_words test_str
-puts word_count
+puts count_words "The rent is due on the first day of the month unless the first day of the month falls on a Saturday or Sunday"
+puts count_words "A man, a plan, a canal -- Panama"
+puts count_words "Doo bee doo bee doo"
+=end
