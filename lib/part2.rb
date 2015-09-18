@@ -14,7 +14,11 @@ def rps_game_winner(game)
 end
 
 def rps_tournament_winner(tournament)
-  # YOUR CODE HERE
+  if tournament.first.first.is_a? String
+    return rps_game_winner(tournament)
+  else
+    return rps_tournament_winner(tournament.first, rps_tournament_winner(last))
+  end
 end
 
 #feel free to add your own helper functions as needed
