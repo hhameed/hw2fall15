@@ -20,14 +20,15 @@ class Foo
 end
 
 f = Foo.new
+puts f.bar_history.inspect
 f.bar = 3
 f.bar = :wowzo
 f.bar = 'boo!'
-f.bar_history
+puts f.bar_history.inspect
 
 f = Foo.new
 f.bar = 1
 f.bar = 2
 f = Foo.new
 f. bar = 4
-f.bar_history
+puts f.bar_history.inspect
