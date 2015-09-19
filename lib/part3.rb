@@ -35,6 +35,7 @@ class JellyBean < Dessert
   end
 end
 
+=begin
 bc = Dessert.new("Black Choco", 300)
 puts bc.name.inspect
 puts bc.calories.inspect
@@ -53,3 +54,4 @@ puts jb.flavor = 'black licorice'
 puts jb.delicious?.inspect
 jb.calories = 50
 puts jb.healthy?.inspect
+=end
