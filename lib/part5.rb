@@ -9,7 +9,6 @@ class CartesianProduct
   def each
     @arr1.each do |i|
       @arr2.each do |j|
-        puts "I am called...\n"
         yield([i, j])
       end
     end
@@ -17,8 +16,10 @@ class CartesianProduct
 
 end
 
+puts "First"
 c = CartesianProduct.new([:a,:b], [4,5])
 c.each { |elt| puts elt.inspect }
 
+puts "Second"
 c = CartesianProduct.new([:a,:b], [])
 c.each { |elt| puts elt.inspect }
