@@ -15,23 +15,3 @@ class Class
   end
 end
 
-=begin
-class Foo
-  attr_accessor_with_history :bar
-end
-
-f = Foo.new
-puts f.bar_history.inspect
-f.bar = 3
-f.bar = :wowzo
-f.bar = 'boo!'
-puts f.bar_history.inspect
-
-f = Foo.new
-f.bar = 1
-f.bar = 2
-puts f.bar_history.inspect
-f = Foo.new
-f. bar = 4
-puts f.bar_history.inspect
-=end

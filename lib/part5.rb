@@ -16,12 +16,3 @@ class CartesianProduct
 
 end
 
-=begin
-puts "First"
-c = CartesianProduct.new([:a,:b], [4,5])
-c.each { |elt| puts elt.inspect }
-
-puts "Second"
-c = CartesianProduct.new([:a,:b], [])
-c.each { |elt| puts elt.inspect }
-=end
