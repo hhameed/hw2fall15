@@ -23,7 +23,7 @@ end
 
 #feel free to add your own helper functions as needed
 
-
+=begin
 #puts rps_game_winner([['Scissor', 'S'],['Scissor', 'S'],['Scissor', 'S']]).inspect
 
 puts rps_game_winner([['Scissor', 'S'], ['Rock', 'R']]).inspect
@@ -58,3 +58,4 @@ puts rps_tournament_winner([
 		[["Ted", "R"], ["Carol", "P"]]
 	]
 ]).inspect
+=end
