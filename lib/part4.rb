@@ -29,6 +29,7 @@ puts f.bar_history.inspect
 f = Foo.new
 f.bar = 1
 f.bar = 2
+puts f.bar_history.inspect
 f = Foo.new
 f. bar = 4
 puts f.bar_history.inspect
